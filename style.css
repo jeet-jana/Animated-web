@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: black;
+    color: lightgray;
+    min-height: 100vh;
+}
+
+/* //image// */
+
+.gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.layer-blur {
+    height: 0;
+    width: 25rem;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    box-shadow: 0 0px 270px 10px white;
+    rotate: -30deg;
+    z-index: 999;
+}
+
+.navbar {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.2rem;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    z-index: 998;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-left: -5%;
+}
+
+nav a {
+    text-decoration: none;
+    letter-spacing: 0.1 rem;
+    transition: color 0.2s ease;
+    color: inherit;
+}
+
+nav a:hover {
+    color: gray;
+}
+
+.sign-in {
+    background-color: #a7a7a7;
+    color: black;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.sign-in:hover {
+    background-color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(90vh - 6rem);
+
+}
+
+.contant {
+    max-width: 40rem;
+    margin-left: 10%;
+    z-index: 997;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.tag-box {
+    position: relative;
+    width: 18rem;
+    height: 2.5rem;
+    border-radius: 50px;
+    background: linear-gradient(to right, #656565, #6600c5, #5300a0, #757575, #656565);
+    background-size: 200%;
+    animation: ani 2.5s linear infinite;
+    box-shadow: 0 0 15px;
+    margin-top: 7rem;
+}
+
+@keyframes ani {
+    to {
+        background-position: 200%;
+    }
+}
+
+.tag {
+    position: absolute;
+    inset: 3px 3px 3px 3px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.tag:hover {
+    color: purple;
+}
+
+.contant h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin: 1.5rem 0;
+    text-shadow: 0 0 15px color(gray red green blue);
+    background-color: transparent;
+}
+
+.about {
+    font-size: 1.0rem;
+    letter-spacing: 0.05em;
+    margin: 1.5rem 0;
+    max-width: 30rem;
+    color: gray;
+}
+
+.button {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem;
+    background-color: transparent;
+}
+
+.a {
+    text-decoration: none;
+    border: 1px solid #2a2a2a;
+    border-radius: 50px;
+    letter-spacing: 0.1rem;
+    box-shadow: 0 0 10px #0f1f85;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+}
+
+.b {
+    text-decoration: none;
+    background-color: white;
+    border-radius: 50px;
+    letter-spacing: 0.1rem;
+    box-shadow: 0 0 10px #454968;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    transition: letter-spacing 0.5s ease;
+}
+
+.b:hover {
+    letter-spacing: 0.3rem;
+}
+
+.robot {
+    position: absolute;
+    top: 10%;
+    right: -20%;
+    /* height: 35rem; */
+    background-color: transparent;
+
+}
+
+/* taplet */
+@media(max-width: 1330px) {
+    header {
+        padding: 1rem 0.5rem;
+    }
+
+    .contant {
+        margin-top: 75%;
+    }
+
+    .robot {
+        scale: 0.8;
+        top: -20%;
+        right: 2%;
+    }
+
+}
+
+@media(max-width: 768px) {
+    header {
+        padding: 1rem 0.1rem;
+    }
+
+    nav {
+        display: none;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .sign-in {
+        padding: 0.6rem 1.5rem;
+    }
+
+    .robot {
+        scale: 0.5;
+        top: -25%;
+        right: 0;
+    }
+
+    .tag-box {
+        max-width: 12rem;
+
+    }
+
+    .contant {
+        margin-top: 15rem;
+        max-width: 30rem;
+    
+    }
+
+    .contant h1 {
+        font-size: 2.5rem;
+    }
+
+    .about {
+        font-size: 1rem;
+    }
+    .a{
+        font-size: 0.8rem;
+        padding: 0.8rem 1.2rem;
+    }
+    .b{
+        font-size: 0.8rem;
+        padding: 0.8rem 2rem;
+    }
+}
